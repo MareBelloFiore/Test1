@@ -1,0 +1,30 @@
+<img id="test" src="https://codingapple1.github.io/kona.jpg">
+<script>
+
+  //Q1. 이미지로딩 체크하는 Promise 만들기
+
+  var 이미지로딩 = new Promise(function (성공, 실패) {
+    var img = document.querySelector('#test');
+    img.addEventListener('load', function () {
+      성공();
+    });
+
+    img.addEventListener('error', function () {
+      실패();
+    });
+  });
+
+
+  이미지로딩.then(function () {
+    console.log('로딩성공')
+  }).catch(function () {
+    console.log('로딩실패')
+  });
+
+
+
+
+
+
+
+</script>
