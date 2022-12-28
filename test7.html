@@ -1,0 +1,47 @@
+<script>
+
+  var testObj = {
+    name: 'Moon',
+    age: 27
+  }
+  var props;
+  for (props in testObj) {
+    console.log("property : " + props + ", value : " + testObj[props]);
+  }
+  //
+
+  var testArray = ['a', 'b', 'c', 'd'];
+  testArray.splice(2, 1);
+  console.log(testArray);
+  console.log(testArray.length);
+  //
+
+
+  const arr = [0, 1, 2];
+
+  for (let value of arr) {
+    console.log(value);
+  }
+  //
+
+
+  var num = 5;
+  switch (num % 2) {
+    case 0:
+      alert("해당 값은 짝수!");
+      break;
+    case 1:
+      alert("해당 값은 홀수!");
+      break;
+    default:
+      alert("잘못된 입력 값!");
+      break;
+  }
+  //
+
+
+  for (var i = 1; i < 10; i++) {
+    console.log(i + "번째 실행!");
+  }
+
+</script>
