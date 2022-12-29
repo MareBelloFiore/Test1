@@ -1,0 +1,62 @@
+<script>
+
+  const map = new Map();
+  map.set("2019101", "홍길동");
+  map.set("2019102", "김사랑");
+  map.set("2019103", "강동수");
+
+  map.forEach((value, key) => console.log(key + "," + value));
+
+  for (let item of map) {
+    console.log(item[0] + "," + item[1]);
+  }
+
+  for (let [key, value] of map) {
+    console.log(key + "," + value)
+  }
+
+
+  const keys = map.keys();
+  for (let key of keys) {
+    console.log(map.get(key));
+  }
+  //
+
+
+  function Product(name, price) {
+    this.name = name;
+    this.price = price;
+    this.getInfo = function () {
+      return this.name + "," + this.price;
+    }
+  }
+
+  let p1 = new Product("애플 아이폰", 100000);
+  let p2 = new Product();
+  p2.name = "삼성 갤럭시"
+  p2.price = 110000;
+
+  console.log(p1.getInfo());
+  console.log(p2.getInfo());
+  //
+
+  class Product {
+    constructor(name, price) {
+      this.name = name;
+      this.price = price;
+    }
+
+    getInfo() {
+      return this.name + "," + this.price;
+    }
+  }
+
+  let p1 = new Product("애플 아이폰", 100000);
+  let p2 = new Product();
+  p2.name = "삼성 갤럭시"
+  p2.price = 110000;
+
+  console.log(p1.getInfo());
+  console.log(p2.getInfo());
+
+</script>
