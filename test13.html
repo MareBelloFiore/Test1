@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button Event</title>
+</head>
+
+<body>
+  <form>
+    <input type="button" value="Btn1" onclick="btnClick(event)">
+
+    <input id="b2" type="button" value="Btn2">
+  </form>
+
+
+
+
+  <script>
+    function btnClick(event) {
+      alert(event.target.value + " 클릭됨!");
+    }
+
+    document.getElementById('b2').onclick = function (event) {
+      alert(event.target.value + " 클릭됨!")
+    }
+
+
+  </script>
+
+
+</body>
+
+</html>
