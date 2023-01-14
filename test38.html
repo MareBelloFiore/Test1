@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Color</title>
+</head>
+
+<body>
+  <h1>배경색 바꾸기</h1>
+  <button id="btn">누르시오</button>
+  <script>
+    const btnElm = document.getElementById('btn');
+
+    btnElm.addEventListener('click', () => {
+      document.body.style.backgroundColor = 'red';
+    });
+  </script>
+
+</body>
+
+</html>
