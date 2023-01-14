@@ -1,0 +1,21 @@
+<span id="hs">0%</span><br>
+<input type="button" value="클릭" onclick="change()">
+
+<script>
+  function change() {
+    const hs = document.getElementById('hs');
+    if (hs.innerText == "0%") {
+      hs.innerText = "25%";
+    } else if (hs.innerText == "25%") {
+      hs.innerText = "50%";
+    } else if (hs.innerText == "50%") {
+      hs.innerText = "75%";
+    } else if (hs.innerText == "75%") {
+      hs.innerText = "100%";
+    } else {
+      hs.innerText = "0%";
+    }
+  }
+
+
+</script>
