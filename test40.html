@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #hs {
+      border: 1px solid silver;
+      width: 400px;
+      height: 200px;
+      overflow: scroll;
+    }
+
+    #hs p {
+      width: 750px;
+      height: 300px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="hs" onscroll="scr()">
+    <p>스크롤 횟수를 알아보자</p>
+  </div>
+  <p>Scroll 횟수 : <span id="demo">0</span></p>
+
+  <script>
+    var x = 0;
+    function scr() {
+      document.getElementById("demo").innerHTML = x += 1;
+    }
+  </script>
+</body>
+
+</html>
