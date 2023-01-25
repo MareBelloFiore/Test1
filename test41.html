@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI 계산기</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>BMI 계산기</h1>
+
+    <p>키 (cm)</p>
+    <input type="text" id="height">
+
+    <p>몸무게 (kg)</p>
+    <input type="text" id="weight">
+
+    <button id="btn">계산하기</button>
+
+    <div id="result"></div>
+  </div>
+
+
+  <script>
+    window.onload = () => {
+      const button = document.querySelector("#btn");
+
+      button.addEventListener("click", calculateBMI);
+    };
+
+    function calculateBMI() {
+      const height = parseInt(document.querySelector("#height").value);
+      const weight = parseInt(document.querySelector("#weight").value);
+      const result = document.querySelector("#result");
+
+      if (height === "" || isNaN(height)) {
+        result.innerHTML = "키를 입력해 주세요.";
+      } else if (weight === "" || isNaN(weight)) {
+        result.innerHTML = "몸무게를 입력해 주세요.";
+      } else {
+        const bmi = (weight / ((height * height) / 10000)).toFixed(2);  // 키의 단위를 m로  변환 및 소수점 둘 째자리까지 반올림
+
+        if (bmi <= 18.5) {
+          result.innerHTML = `저체중: <span>${bmi}</span>`;
+        } else if (bmi <= 23) {
+          result.innerHTML = `정상: <span>${bmi}</span>`;
+        } else if (bmi <= 25) {
+          result.innerHTML = `과체중: <span>${bmi}</span>`;
+        } else {
+          result.innerHTML = `고도비만: <span>${bmi}</span>`;
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>
