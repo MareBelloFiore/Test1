@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <select id="mysel" onchange="myselect()">
+    <option>현대</option>
+    <option>기아</option>
+    <option>쉐보레</option>
+    <option>BMW</option>
+  </select>
+  <h4 id=selres></h4>
+</body>
+<script>
+  function myselect() {
+    var msg = document.getElementById('mysel').value;
+    document.getElementById('selres').innerHTML = msg;
+  }
+</script>
+
+
+</html>
